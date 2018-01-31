@@ -1,6 +1,14 @@
 <h1>Mon gossip</h1>
 
-<h2>Auteur : <%= @gossip.anonymous_author %></h2>
+<h3>Auteur du gossip :</h3>
+<p>
+  <%= @gossip.anonymous_author %>
+</p>
+<h3>Gossip :</h3>
   <p>
-    Gossip : <%= @gossip.content %>
+     <%= @gossip.content %>
+  </p>
+
+  <p>
+  <%= link_to("Retour aux gossips", gossips_path ) %>
   </p>

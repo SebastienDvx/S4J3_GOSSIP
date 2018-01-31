@@ -1,14 +1,24 @@
 <h1>Nouveau gossip...</h1>
 
 <p>
-<%= form_tag (gossips_path) do %>
+<!-- # <%= form_tag (gossips_path) do %>
+#
+#   <%= label_tag 'anonymous_author', 'Auteur' %>
+#   <%= text_field_tag 'anonymous_author' %>
+#
+#   <%= label_tag 'content', 'Contenu' %>
+#   <%= text_area_tag 'content' %>
+#
+#   <%= submit_tag "Créer le gossip"%>
+# <% end %> -->
 
-  <%= label_tag 'anonymous_author', 'Auteur' %>
-  <%= text_field_tag 'anonymous_author' %>
-
-  <%= label_tag 'content', 'Contenu' %>
-  <%= text_area_tag 'content' %>
-
-  <%= submit_tag "Créer le gossip"%>
+<%= form_for @gossip do |g| %>
+  <%= g.text_field :anonymous_author %>
+  <p>
+    <%= g.text_area :content %>
+  </p>
+  <%= g.submit "Créer gossip" %>
 <% end %>
+
+
 </p>
