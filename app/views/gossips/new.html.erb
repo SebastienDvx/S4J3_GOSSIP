@@ -11,10 +11,11 @@
 #
 #   <%= submit_tag "Créer le gossip"%>
 # <% end %> -->
-
 <%= form_for @gossip do |g| %>
+  <h3>Auteur</h3>
   <%= g.text_field :anonymous_author %>
   <p>
+    <h3>Gossip</h3>
     <%= g.text_area :content %>
   </p>
   <%= g.submit "Créer gossip" %>

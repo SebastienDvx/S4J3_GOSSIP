@@ -10,5 +10,12 @@
   </p>
 
   <p>
+      <%= link_to "Destroy", @gossip,
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+      <%= link_to("Update", edit_gossip_path)%>
+  </p>
+
+  <p>
   <%= link_to("Retour aux gossips", gossips_path ) %>
   </p>
